@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: 1px solid red;
+}
+
+body {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, white -20%, #7ac74c 100%);
+  font-size: 16px;
+  height: 100vh;
+}/*# sourceMappingURL=styles.css.map */
