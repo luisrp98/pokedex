@@ -31,3 +31,22 @@ body {
     font-size: 16px;
     height: 100vh;
 }
+
+.container {
+    display: flex;
+}
+.a {
+    width: 100px;
+    background-color: #6390f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.54);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+}
