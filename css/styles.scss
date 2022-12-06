@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 // Color variables
 $color_normal: #a8a77a;
 $color_fire: #ee8130;
@@ -31,17 +32,28 @@ body {
     font-size: 16px;
     height: 100vh;
 }
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .container {
-    display: flex;
+    width: 35em;
 }
-.a {
-    width: 100px;
-    background-color: #6390f0;
+
+.text {
+    width: 10em;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
 }
+.text p {
+    font-family: 'Roboto';
+    margin-top: 1em;
+}
+
 .card {
     /* From https://css.glass */
     background: rgba(0, 0, 0, 0.54);
