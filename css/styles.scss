@@ -1,37 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-// Color variables
-$color_normal: #a8a77a;
-$color_fire: #ee8130;
-$color_water: #6390f0;
-$color_electric: #f7d02c;
-$color_grass: #7ac74c;
-$color_ice: #96d9d6;
-$color_fighting: #c22e28;
-$color_poison: #a33ea1;
-$color_ground: #e2bf65;
-$color_flying: #a98ff3;
-$color_psychic: #f95587;
-$color_bug: #a6b91a;
-$color_rock: #b6a136;
-$color_ghost: #735797;
-$color_dragon: #6f35fc;
-$color_dark: #705746;
-$color_steel: #b7b7ce;
-$color_fairy: #d685ad;
 
-$color_bg: $color_grass;
+// Color variables
+@import './pokemonColors';
+
+// Responsive design
+@import 'Media\ Queries/smallDevices'; // < 768
+@import 'Media\ Queries/mediumDevices'; // 768 - 1024px
+@import 'Media\ Queries/largeDevices'; // 1024px - 1200px
+@import 'Media\ Queries/extraLargeDevices'; // 1200px >
+
+$color_bg: $color_rock; // Test
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     outline: 1px solid red;
 }
-body {
-    background: rgb(0, 0, 0);
-    background: radial-gradient(circle, white -20%, $color_bg 100%);
-    font-size: 16px;
-    height: 100vh;
-}
+// body {
+//     background: rgb(0, 0, 0);
+//     background: radial-gradient(circle, white -20%, $color_bg 100%);
+//     font-size: 16px;
+//     height: 100vh;
+// }
 .center {
     display: flex;
     flex-direction: column;
@@ -48,10 +38,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    p {
+        font-family: 'Roboto';
+        margin-top: 1em;
+    }
 }
-.text p {
+label {
     font-family: 'Roboto';
-    margin-top: 1em;
 }
 
 .card {

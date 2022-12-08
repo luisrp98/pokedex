@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/styles.css" />
-        <script src="js/script.js"></script>
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,17 +19,18 @@
             <div class="input center">
                 <label for="pokemon_input">Pokemon:</label>
                 <input type="text" id="pokemon_input" name="pokemon_input" autofocus />
-                <button>Okay</button>
+                <button id="btn_search">Buscar</button>
             </div>
             <div class="card center">
                 <div class="circle">
                     <img
+                        id="pokemon_img"
                         src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/132.png"
                         alt=""
                     />
                 </div>
                 <div class="text">
-                    <p>Nombre</p>
+                    <p id="pokemon_name">Nombre</p>
                     <p>Numero</p>
                     <p>Tipo</p>
                     <p>ps</p>
@@ -42,5 +42,6 @@
                 </div>
             </div>
         </div>
+        <script src="js/script.js"></script>
     </body>
 </html>

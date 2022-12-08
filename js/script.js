@@ -18,8 +18,50 @@ const colours = {
     steel: '#B7B7CE',
     fairy: '#D685AD',
 }
-const pokeapi_url = 'https://pokeapi.co/api/v2/pokemon/ditto'
+const pokeapi_url = 'https://pokeapi.co/api/v2/pokemon/' // Add num or name
+const pokemon_img_url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/` //Add name + .png
 
-fetch(pokeapi_url)
-    .then((res) => res.json())
-    .then((data) => console.log(data))
+async function getPokemonImg(pokemon_input) {
+    fetch(pokeapi_url + pokemon_input)
+        .then((res) => res.json())
+        .then((data) => {
+            document.getElementById('pokemon_img').src =
+                data.sprites.other.home.front_default
+            console.log(data.sprites.other.home.front_default)
+        })
+}
+async function getPokemonData(pokemon_input) {
+    fetch(pokeapi_url + pokemon_input)
+        .then((res) => res.json())
+        .then((data) => {
+            document.getElementById('pokemon_name').innerHTML =
+                'Nombre: ' + capitalize(data.species.name)
+            //     data.sprites.other.home.front_default
+            console.log(data)
+        })
+}
+
+function capitalize(word) {
+    return word[0].toUpperCase() + word.slice(1)
+}
+const btn_search = document.getElementById('btn_search')
+btn_search.addEventListener('click', () => {
+    pokemon_input = document.getElementById('pokemon_input').value
+    getPokemonImg(pokemon_input)
+    getPokemonData(pokemon_input)
+})
+
+// addEventListener('pokemon_input')
+// getPokemonImg()
+// document.getElementById('pokemon').attribute =
+// console.log(a.sprites)
+// a.sprites.other.home.front_default
+
+// fetch(pokeapi_url)
+//     .then((res) => res.json())
+//     .then((data) => {
+//         console.log(data)
+//         console.log(data.sprites.other.home.front_default)
+//         // document.getElementById('pokemon_img').src =
+//         //     data.sprites.other.home.front_default
+//     })

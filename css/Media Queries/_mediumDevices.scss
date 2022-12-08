@@ -1,0 +1,9 @@
+// Horizontal mobiles (and vertical tablets)
+@media (min-width: 768px) {
+    body {
+        background: rgb(0, 0, 0);
+        background: radial-gradient(circle, white -20%, blue 100%);
+        font-size: 16px;
+        height: 100vh;
+    }
+}

@@ -1,0 +1,9 @@
+// Big browsers
+@media (min-width: 1200px) {
+    body {
+        background: rgb(0, 0, 0);
+        background: radial-gradient(circle, white -20%, purple 100%);
+        font-size: 16px;
+        height: 100vh;
+    }
+}
